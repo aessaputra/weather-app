@@ -8,7 +8,7 @@ const WeatherForecast = () => {
   const [error, setError] = useState('')
 
   const fetchForecast = async () => {
-    const apiKey = '35ykqvaGBxUIeKwvG2dF09L278z5Ji1j'
+    const apiKey = process.env.WEATHER_API_KEY
     const [latitude, longitude] = coordinates
       .split(',')
       .map((coord) => coord.trim())
